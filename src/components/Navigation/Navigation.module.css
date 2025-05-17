@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav {
+  display: flex;
+  padding-left: 12px;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  transition: transform 0.3s ease;
+}
+
+.link:hover,
+.link:focus {
+  transform: scale(1.1);
+}
+
+.isActive {
+  color: orangered;
+}

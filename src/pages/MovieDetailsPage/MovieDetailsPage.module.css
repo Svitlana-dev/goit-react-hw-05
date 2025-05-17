@@ -1,0 +1,73 @@
+.back {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding-left: 12px;
+  transition: transform 0.3s ease;
+}
+
+.back:hover,
+.back:focus {
+  transform: scale(1.1);
+  color: orangered;
+}
+
+.wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.poster {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.info {
+  flex: 1;
+}
+
+.info h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.info p {
+  margin: 8px 0;
+}
+
+.genres {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.additional {
+  padding-left: 12px;
+}
+
+.list {
+  display: flex;
+  gap: 20px;
+  padding-left: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid black;
+  list-style: none;
+}
+
+.link {
+  display: inline-block;
+  color: black;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.link:hover,
+.link:focus {
+  transform: scale(1.1);
+}
+
+.isActive {
+  color: orangered;
+}
