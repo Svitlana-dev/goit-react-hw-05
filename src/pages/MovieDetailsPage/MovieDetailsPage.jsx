@@ -9,6 +9,7 @@ import {
 import { fetchMovieById } from '../../services/movieService';
 import css from './MovieDetailsPage.module.css';
 import clsx from 'clsx';
+import { BeatLoader } from 'react-spinners';
 
 const getActiveLinkClass = ({ isActive }) => {
   return clsx(css.link, isActive && css.isActive);
@@ -68,7 +69,13 @@ export default function MovieDetailsPage() {
         </li>
       </ul>
 
-      <Suspense fallback={<strong>Loading subcomponent...</strong>}>
+      <Suspense
+        fallback={
+          <div className={css.spinner}>
+            <BeatLoader size={15} color="#000" loading={true} />
+          </div>
+        }
+      >
         <Outlet />
       </Suspense>
     </div>

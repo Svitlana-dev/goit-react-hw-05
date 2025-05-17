@@ -1,3 +1,9 @@
 .container {
   padding: 32px;
 }
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+}

@@ -13,13 +13,20 @@ const MovieCast = lazy(() => import('./components/MovieCast/MovieCast'));
 const MovieReviews = lazy(() =>
   import('./components/MovieReviews/MovieReviews'),
 );
+import { BeatLoader } from 'react-spinners';
 
 export default function App() {
   return (
     <>
       <Navigation />
       <div className={css.container}>
-        <Suspense fallback={<strong>Loading page...</strong>}>
+        <Suspense
+          fallback={
+            <div className={css.spinner}>
+              <BeatLoader size={15} color="#000" loading={true} />
+            </div>
+          }
+        >
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/movies" element={<MoviesPage />} />
