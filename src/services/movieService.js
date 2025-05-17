@@ -3,8 +3,7 @@ import axios from 'axios';
 const options = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
   headers: {
-    Authorization:
-      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZmQ4NWUxY2ZjOTZkNDIxYjVlZmRmNjFhZjRlZDUxYSIsIm5iZiI6MTc0NzQ3NjIxMS40NTYsInN1YiI6IjY4Mjg1ZWYzYjYwMjQ2MDMxNDBiY2Q2MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Smar8JfHpIuV1AHyAsDrYs9pgzmmTqRdxYiyzEGeauk',
+    Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_TOKEN}`,
   },
 });
 
